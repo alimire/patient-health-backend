@@ -9,7 +9,7 @@ on:
 env:
   IMAGE_NAME: patient-health-backend
   REGISTRY_HOSTNAME: us.icr.io
-  REGISTRY_NAMESPACE: patient-health-dev
+  REGISTRY_NAMESPACE: ${{ vars.IBM_REGISTRY_NAMESPACE }}
 
 jobs:
   build:

@@ -60,3 +60,17 @@ spec:
   - port: 3000
     targetPort: 3000
   type: ClusterIP
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: patient-health-backend
+  namespace: patient-health
+spec:
+  to:
+    kind: Service
+    name: patient-health-backend
+    weight: 100
+  port:
+    targetPort: 3000
+  wildcardPolicy: None
