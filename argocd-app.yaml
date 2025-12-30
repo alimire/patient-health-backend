@@ -9,7 +9,7 @@ spec:
     namespace: patient-health
     server: 'https://kubernetes.default.svc'
   source:
-    path: .
+    path: k8s
     repoURL: 'https://github.com/alimire/patient-health-backend.git'
     targetRevision: dev
   project: default
